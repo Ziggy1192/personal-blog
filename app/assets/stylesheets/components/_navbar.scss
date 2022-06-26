@@ -1,0 +1,37 @@
+.navigation {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-items: center;
+    .my-name {
+      height: 100%;
+      background-color: black;
+      color: white;
+      padding-left: 1em;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      h4 {
+        font-family: monospace;
+      }
+    }
+    .links {
+      height: 100%;
+      background-color: rgb(61, 61, 59);
+      padding-right: 1em;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+        li {
+          padding: 0 12px;
+          display: inline;
+          list-style: none;
+          color: white;
+          font-family: monospace;
+          &:hover {
+            color: blue;
+          }
+
+        }
+      }
+}

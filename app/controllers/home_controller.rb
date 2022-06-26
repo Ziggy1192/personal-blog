@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-  def index
+  def landing
     @posts = Post.all
   end
 
