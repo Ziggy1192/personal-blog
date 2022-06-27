@@ -1,10 +1,15 @@
-<div class="navigation">
-  <div class="my-name col-4">
+<div class="navi">
+  <div class="my-name">
     <h4>Dziugas Bartkevicius</h4>
   </div>
-  <div class="links col-8">
-      <li>about</li>
-      <li>projects</li>
-      <li>personal blog</li>
+  <ul class="nav-links">
+    <li><%= link_to "About", root_path %></li>
+    <li><%= link_to "Projects", root_path %></li>
+    <li><%= link_to "Blog", root_path %></li>
+  </ul>
+  <div class="burger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
   </div>
 </div>

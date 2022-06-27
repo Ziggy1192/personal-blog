@@ -1,37 +1,114 @@
-.navigation {
-  height: 100px;
-  width: 100%;
-  display: flex;
-  justify-items: center;
-    .my-name {
-      height: 100%;
-      background-color: black;
-      color: white;
-      padding-left: 1em;
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      h4 {
-        font-family: monospace;
-      }
-    }
-    .links {
-      height: 100%;
-      background-color: rgb(61, 61, 59);
-      padding-right: 1em;
-      display: flex;
-      justify-content: end;
-      align-items: center;
-        li {
-          padding: 0 12px;
-          display: inline;
-          list-style: none;
-          color: white;
-          font-family: monospace;
-          &:hover {
-            color: blue;
-          }
-
-        }
-      }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+.navi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+  width: 100%;
+  padding: 0 24px;
+  font-family: monospace;
+  background-color: black;
+
+}
+
+.my-name {
+  letter-spacing: 2px;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  width: 25%;
+  margin-bottom: inherit;
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+    color: blue;
+    }
+  }
+}
+
+.burger {
+  display: none;
+}
+.burger div {
+  height: 5px;
+  width: 30px;
+  background-color: white;
+  margin: 7px;
+  border-radius: 2px;
+}
+@media screen and (max-width:768px){
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    background-color: black;
+    top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width:1024px){
+  .nav-links {
+    width: 40%;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+
+// .my-name {
+//   height: 100%;
+//   color: white;
+//   padding-left: 1em;
+//   align-items: center;
+//   h4 {
+//     font-family: monospace;
+//     font-size: 1.2rem
+//   }
+// }
+// .nav-links {
+//   height: 100%;
+//   padding-right: 1em;
+//   display: flex;
+//   justify-content: end;
+//   align-items: center;
+//   ul {
+//     margin: 0 0;
+//     li {
+//       padding: 0 12px;
+//       display: inline;
+//       list-style: none;
+//       color: white;
+//       font-family: monospace;
+//       &:hover {
+//         color: blue;
+//       }
+//     }
+//   }
+// }
