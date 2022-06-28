@@ -1,11 +1,11 @@
 <div class="navi" data-controller="open-nav-burger">
   <div class="my-name">
-    <h4>Dziugas Bartkevicius</h4>
+    <h4>Dziugas B</h4>
   </div>
   <ul class="nav-links" data-open-nav-burger-target="nav" >
-    <li><%= link_to "About", root_path %></li>
+    <div class="eff1"><li><%= link_to "Contact me", root_path %></li></div>
     <li><%= link_to "Projects", root_path %></li>
-    <li><%= link_to "Blog", root_path %></li>
+    <li><%= link_to "Blog", posts_path(@posts) %></li>
   </ul>
   <div class="burger" data-open-nav-burger-target="burger" data-action="click->open-nav-burger#openMenu"  >
     <div class="line1"></div>
